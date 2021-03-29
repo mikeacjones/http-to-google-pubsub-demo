@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:mule-googlepubsub="http://www.mulesoft.org/schema/mule/mule-googlepubsub" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/mule-googlepubsub http://www.mulesoft.org/schema/mule/mule-googlepubsub/current/mule-mule-googlepubsub.xsd">
+	<mule-googlepubsub:config name="Google_PubSub_Google_PubSub_Producer_Configuration" doc:name="Google PubSub Google PubSub Producer Configuration" doc:id="d6e86036-9cac-4869-94dc-37b05eab7097" >
+		<mule-googlepubsub:googlepubsub-producer-connection credentialFilePath="${mule.home}/apps/${app.name}/google-key.json" topicName="${google.pubsub.topicId}" projectId="${google.pubsub.projectId}"/>
+	</mule-googlepubsub:config>
+</mule>
