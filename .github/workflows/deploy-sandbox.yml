@@ -32,5 +32,7 @@ jobs:
           BUSINESS_GROUP_ID: ${{ secrets.BUSINESS_GROUP_ID }}
           PLATFORM_CLIENT_ID: ${{ secrets.PLATFORM_CLIENT_ID }}
           PLATFORM_CLIENT_SECRET: ${{ secrets.PLATFORM_CLIENT_SECRET }}
+          GOOG_TOPICID: ${{ secrets.GOOG_TOPICID }}
+          GOOG_PROJECTID: ${{ secrets.GOOG_PROJECTID }}
           APP_NAME: store-data-ingestion-sapi-v1
           PLATFORM_ENV: Sandbox
