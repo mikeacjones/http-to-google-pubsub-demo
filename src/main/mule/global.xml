@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:mule-googlepubsub="http://www.mulesoft.org/schema/mule/mule-googlepubsub" xmlns="http://www.mulesoft.org/schema/mule/core"
-	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-http://www.mulesoft.org/schema/mule/mule-googlepubsub http://www.mulesoft.org/schema/mule/mule-googlepubsub/current/mule-mule-googlepubsub.xsd">
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway" xmlns:mule-googlepubsub="http://www.mulesoft.org/schema/mule/mule-googlepubsub"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/mule-googlepubsub http://www.mulesoft.org/schema/mule/mule-googlepubsub/current/mule-mule-googlepubsub.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
 	<mule-googlepubsub:config name="Google_PubSub_Google_PubSub_Producer_Configuration" doc:name="Google PubSub Google PubSub Producer Configuration" doc:id="d6e86036-9cac-4869-94dc-37b05eab7097" >
 		<mule-googlepubsub:googlepubsub-producer-connection credentialFilePath="${mule.home}/apps/${app.name}/google-key.json" topicName="${google.pubsub.topicId}" projectId="${google.pubsub.projectId}"/>
 	</mule-googlepubsub:config>
+	<api-gateway:autodiscovery apiId="16729790" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="ec14ba40-27b6-4871-8a18-90035c8d385f" flowRef="store-data-sapi-main" />
 </mule>
